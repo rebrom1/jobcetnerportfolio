@@ -1,0 +1,147 @@
+/* JobsPanel.css */
+
+.jobs-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: rgba(8, 131, 149, 0.1);
+  border: 1px solid rgba(0, 255, 202, 0.2);
+  border-radius: 50px;
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--light);
+  background: rgba(8, 131, 149, 0.2);
+}
+
+.search-box button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  border: none;
+  border-radius: 50px;
+  color: var(--dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(5, 191, 219, 0.4);
+}
+
+.jobs-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.job-card {
+  background: rgba(8, 131, 149, 0.1);
+  border: 1px solid rgba(0, 255, 202, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.job-card:hover {
+  background: rgba(8, 131, 149, 0.2);
+  border-color: var(--light);
+  transform: translateX(10px);
+}
+
+.job-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  color: var(--light);
+  margin-bottom: 0.5rem;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: rgba(232, 246, 243, 0.6);
+}
+
+.job-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.apply-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 25px;
+  transition: all 0.3s;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(5, 191, 219, 0.4);
+}
+
+.empty-state,
+.loading-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(232, 246, 243, 0.7);
+}
+
+.empty-state button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  border: none;
+  border-radius: 50px;
+  color: var(--dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.empty-state button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(5, 191, 219, 0.4);
+}
+
+@media (max-width: 768px) {
+  .job-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .search-box {
+    flex-direction: column;
+  }
+}
